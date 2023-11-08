@@ -1,5 +1,6 @@
 const express = require("express");
 const morgan = require("morgan");
+const axios = require("axios");
 const fs = require("fs");
 const puppeteer = require("puppeteer");
 const puppeteerExtra = require("puppeteer-extra");
@@ -8,6 +9,7 @@ const AdblockerPlugin = require("puppeteer-extra-plugin-adblocker");
 puppeteerExtra.use(AdblockerPlugin());
 const app = express();
 const port = 3005;
+const apiUrl = "https://strapi-demo-tupho.ondigitalocean.app"; // Replace with your Strapi API URL
 
 // Create a writable stream for logs
 const logStream = fs.createWriteStream("app-logs.txt", { flags: "a" });
