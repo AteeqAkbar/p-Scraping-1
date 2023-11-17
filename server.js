@@ -40,7 +40,7 @@ const data = require("./finalWithSubId.json");
 const [first, second, third, fourth, fifth, sixth] = data;
 app.get("/data", (req, res) => {
   const contentType = "products"; // Replace with your content type name
-  const fdata = [fourth];
+  const fdata = [fifth];
   total = 0;
   (async () => {
     for (const cat of fdata) {
